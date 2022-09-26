@@ -129,8 +129,9 @@ public class PaniniManager {
 
 			reader.nextLine();
 			System.out.println(
-					"Type the position of the player");
-			String playerPosition = reader.nextLine();
+					"Type the position of the player\nGOALKEEPER, DEFENDER, MIDFIELDER, STRIKER, WINGER");
+			int playerPosition = reader.nextInt();
+			playerPosition --;
 
 			if (controller.registerPlayer(teamID, name, lastName, id, shirtNumber, playerPosition)) {
 				System.out.println("Player was successfully registered");
